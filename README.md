@@ -121,7 +121,7 @@ export default {
 
 ```javascript
 // 编译后产物（示意）
-require.async('pages/subpackage-vendor/common/vendor.js').then(() => {
+__non_webpack_require__.async('pages/subpackage-vendor/common/vendor.js').then(() => {
     return Promise.resolve(require('@/pages/subpackage-vendor/request.js'));
 }).then(...)
 ```
