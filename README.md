@@ -198,6 +198,23 @@ npm run lint
 
 测试 fixture 按真实项目结构裁剪，覆盖：主包/分包目录交错、非 `pages/` 前缀 SDK 分包、pages.json 小写拼写 + 条件编译注释、多入口共享 vendor 等场景。
 
+## 📦 发布
+
+发布前先更新版本号，并检查即将发布到 npm 的文件列表：
+
+```bash
+npm version patch
+npm run publish:dry
+```
+
+确认无误后发布：
+
+```bash
+npm run release
+```
+
+`npm run release` 会执行 `npm publish`，发布前会通过 `prepublishOnly` 自动运行 `npm run lint && npm test`。
+
 ## 🤝 贡献
 
 欢迎提交 PR 或 Issue，共同完善这个项目。

@@ -4,10 +4,14 @@
   "description": "uni-app和webpack4项目架构下实现的微信小程序分包异步化插件",
   "main": "webpack/index.js",
   "scripts": {
+    "verify": "npm run lint && npm test",
     "test": "node --test \"test/*.test.js\"",
     "lint": "eslint lib/ babel/ webpack/ test/*.test.js test/helpers/",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "prepublishOnly": "npm run verify",
+    "publish:dry": "npm publish --dry-run",
+    "release": "npm publish"
   },
   "author": "DBAAZzz",
   "license": "MIT",
