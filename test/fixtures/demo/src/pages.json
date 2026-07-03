@@ -1,0 +1,14 @@
+{
+  // #ifdef MP-WEIXIN
+  "lazyCodeLoading": "requiredComponents",
+  // #endif
+  "pages": [{ "path": "pages/tabbar/home/index" }, { "path": "mp_ecard_sdk/index/index" }],
+  "subpackages": [
+    { "root": "pages/biz", "pages": [{ "path": "index/index" }] },
+    { "root": "pages/biz-vendor", "pages": [{ "path": "index/index" }] },
+    { "root": "mp_ecard_sdk/protocol", "pages": [{ "path": "eid/eid" }] }
+  ],
+  "preloadRule": {
+    "pages/biz/index/index": { "packages": ["pages/biz-vendor"] }
+  }
+}

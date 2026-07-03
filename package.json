@@ -1,23 +1,31 @@
 {
   "name": "uni-async-import",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "uni-app和webpack4项目架构下实现的微信小程序分包异步化插件",
   "main": "webpack/index.js",
   "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "lint": "eslint lib/ babel/ webpack/ test/*.test.js test/helpers/",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "author": "DBAAZzz",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "babel-loader": "^8.4.1",
+    "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.1",
-    "prettier": "^3.6.1"
+    "prettier": "^3.6.1",
+    "webpack": "^4.47.0"
   },
   "dependencies": {
     "@babel/helper-plugin-utils": "^7.27.1",
-    "@babel/types": "^7.27.7",
-    "magic-string": "^0.30.17",
-    "webpack": "^4.47.0"
+    "@babel/types": "^7.27.7"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0",
+    "webpack": "^4.0.0"
   }
 }
