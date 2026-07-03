@@ -1,6 +1,8 @@
 node_modules/
 dist/
 build/
+test/
+.vscode/
 .git/
 *.min.js
 *.min.css
